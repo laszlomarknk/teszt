@@ -1,0 +1,63 @@
+/* konténer beállítása */
+.items-container {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto; /* középre igazítás */
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* több sorba törés ha nem fér el */
+  justify-content: center;
+  align-items: center; /* középre igazítás soronként */
+  flex-direction: wrapdown;
+  gap: 20px; /* távolság a kártyák között */
+  box-sizing: border-box;
+}
+
+/* kártyák dizájnja */
+.item-card {
+  margin-top: 20px;
+  
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ddd; /* halvány szürke border */
+  border-radius: 12px; /* lekerekített sarkok */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* enyhe árnyék */
+  padding: 16px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+  /* eltávolítottam a margin:auto és flex-grow, hogy ne nyújtson sorban */
+}
+
+/* hover effekt */
+.item-card:hover {
+  transform: scale(1.03);
+}
+
+/* kép középre igazítása */
+.item-card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 12px auto; /* középre és alul kis távolság */
+  border-radius: 8px;
+}
+
+/* cím */
+.item-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 8px 0;
+  color: #333;
+}
+
+/* szöveg */
+.item-text {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  text-align: justify;
+}
