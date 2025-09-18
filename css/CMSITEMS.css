@@ -16,7 +16,7 @@
 /* kártyák dizájnja */
 .item-card {
   margin-top: 20px;
-  
+  min-width: 300px;
   max-width: 300px;
   display: flex;
   flex-direction: column;
