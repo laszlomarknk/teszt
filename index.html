@@ -5,6 +5,7 @@
   <title>KeSzulo</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
+  <link href="css/cms-items-design-only.webflow.css" rel="stylesheet" type="text/css">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/keszulo.webflow.css" rel="stylesheet" type="text/css">
@@ -45,7 +46,7 @@
     <h1 class="heading">Ismerj meg</h1>
     <p class="paragraph-16">Lakatos Anita vagyok Csecsemő-és Gyermekápoló, dúla. Emellett okleveles elsősegély oktató, babamasszázs oktató, önkéntes szoptatási segítő és kismamamasszőr. <br>‍<br>Hivatásomat 2018-ban a veszprémi megyei kórház szülészet-és újszülött osztályán kezdtem, majd 2 és fél év elteltével egy budapesti magánklinika szülészetén folytattam. Fő feladatom az újszülöttek ellátása, ápolása, a szoptatásban való segítségnyújtás. Segítek a szülőknek elsajátítani a gyakorlati feladatokat, hogy gyermeküket már otthon, a kórházi napok után biztonságban láthassák el. Legfontosabbnak az újszülött és a szülei közötti kapcsolat kialakításában való segítségnyújtást tartom, emellett pedig az édesanya és édesapa szüléssel kapcsolatos élményeinek átbeszélésére, feldolgozására is nagy hangsúlyt fektetek. Munkám során mindennap szembesülök a szülés utáni csodás pillanatokkal, de a nehézségekkel is ,amivel a szülők találkoznak. <br>‍<br>Ezen tapasztalataim után döntöttem úgy, hogy szeretném a szülőket felkészíteni a teljes körű babavárásra. Ezért is végeztem el fő végzettségem mellé, Békés Emőke 2 éves dúlaképzését, melynek első szülés kísérésem egy ukrán menekült édesanya lehetett. <br><br>Fő motivációm és küldetés tudatom, hogy legyen egy olyan kapaszkodó a szülők számára, ahol nincs tabu téma, bármit megkérdezhetnek, fejlődhetnek, tanulhatnak, gyakorlatot és magabiztosságot szerezhetnek gyermekük érkezéséig, kaphatnak egy olyan lelki támaszt ,ami segítheti őket átlendülni a nehéz időszakokon. Ezt a 2022-ben végzett piackutatásom is megerősítette, hogy óriási igény van arra, hogy legyen valaki, akivel meg lehet beszélni a szülőség hozta megpróbáltatásokat. Ezért hoztam létre a KéSzülőt.</p>
   </div>
-  <div id="items">
+  <div id="items" class="items-container">
     <p>Betöltés...</p>
   </div>
   <div class="rl_footer4_component">
@@ -99,11 +100,12 @@
 
           // 3. Item HTML megjelenítése
           const div = document.createElement("div");
-          div.className = "item";
+          div.className = "items-div";
+          div.data-w-id="87623773-5b91-5f32-4a5a-acc53d38bac6";
           div.innerHTML = `
-            <h3>${itemData.title || "Névtelen elem"}</h3>
-            <p>${itemData.description || ""}</p>
-            ${itemData.image ? `<img src="${itemData.image}" alt="Item kép" style="max-width:200px;">` : ""}
+            <h3 class="cim">${itemData.title || "Névtelen elem"}</h3>
+            <p class="text">${itemData.description || ""}</p>
+            ${itemData.image ? `<img src="${itemData.image}"  loading="lazy" sizes="(max-width: 1186px) 100vw, 1186px" class="image"alt="Item kép">` : ""}
           `;
           container.appendChild(div);
         }
