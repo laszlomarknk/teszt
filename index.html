@@ -101,11 +101,11 @@
           // 3. Item HTML megjelenítése
           const div = document.createElement("div");
           div.className = "items-div";
-          div.data-w-id="87623773-5b91-5f32-4a5a-acc53d38bac6";
+          div.setAttribute("data-w-id", "87623773-5b91-5f32-4a5a-acc53d38bac6");
           div.innerHTML = `
             <h3 class="cim">${itemData.title || "Névtelen elem"}</h3>
             <p class="text">${itemData.description || ""}</p>
-            ${itemData.image ? `<img src="${itemData.image}"  loading="lazy" sizes="(max-width: 1186px) 100vw, 1186px" class="image"alt="Item kép">` : ""}
+            ${itemData.image ? `<img src="${itemData.image}" loading="lazy" sizes="(max-width: 1186px) 100vw, 1186px" class="image" alt="Item kép"/>` : ""}
           `;
           container.appendChild(div);
         }
