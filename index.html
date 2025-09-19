@@ -113,7 +113,7 @@
             <h3 class="item-title">${itemData.title || "Névtelen elem"}</h3>
             <p class="item-text">${itemData.description || ""}</p>
             <p class="item-text">${itemData.category || ""}</p>
-            <p class="item-text">${itemData.categoriesquality || ""}</p>
+            <p class="item-text" id="categoriesquality">${itemData.categoriesquality || ""}</p>
             <p class="item-text">${itemData.categorieslevel || ""}</p>
             <p class="item-text">${itemData.categoriesnoves || ""}</p>
             <p class="item-text">${itemData.categoriesmeret || ""}</p>
@@ -137,7 +137,7 @@
     const filterValue = document.getElementById("item-filter-Category").value;
     const cards = document.getElementById("items-Container").getElementsByClassName("item-card");
     Array.from(cards).forEach(card => {
-      const category = card.querySelector("p strong").nextSibling.textContent.trim();
+      const category = card.querySelector(".categoriesquality").textContent.trim();
       if (!filterValue || category === filterValue) {
         card.style.display = "";
       } else {
