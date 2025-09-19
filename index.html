@@ -45,6 +45,14 @@
     <p class="paragraph-16">Lakatos Anita vagyok Csecsemő-és Gyermekápoló, dúla. Emellett okleveles elsősegély oktató, babamasszázs oktató, önkéntes szoptatási segítő és kismamamasszőr. <br>‍<br>Hivatásomat 2018-ban a veszprémi megyei kórház szülészet-és újszülött osztályán kezdtem, majd 2 és fél év elteltével egy budapesti magánklinika szülészetén folytattam. Fő feladatom az újszülöttek ellátása, ápolása, a szoptatásban való segítségnyújtás. Segítek a szülőknek elsajátítani a gyakorlati feladatokat, hogy gyermeküket már otthon, a kórházi napok után biztonságban láthassák el. Legfontosabbnak az újszülött és a szülei közötti kapcsolat kialakításában való segítségnyújtást tartom, emellett pedig az édesanya és édesapa szüléssel kapcsolatos élményeinek átbeszélésére, feldolgozására is nagy hangsúlyt fektetek. Munkám során mindennap szembesülök a szülés utáni csodás pillanatokkal, de a nehézségekkel is ,amivel a szülők találkoznak. <br>‍<br>Ezen tapasztalataim után döntöttem úgy, hogy szeretném a szülőket felkészíteni a teljes körű babavárásra. Ezért is végeztem el fő végzettségem mellé, Békés Emőke 2 éves dúlaképzését, melynek első szülés kísérésem egy ukrán menekült édesanya lehetett. <br><br>Fő motivációm és küldetés tudatom, hogy legyen egy olyan kapaszkodó a szülők számára, ahol nincs tabu téma, bármit megkérdezhetnek, fejlődhetnek, tanulhatnak, gyakorlatot és magabiztosságot szerezhetnek gyermekük érkezéséig, kaphatnak egy olyan lelki támaszt ,ami segítheti őket átlendülni a nehéz időszakokon. Ezt a 2022-ben végzett piackutatásom is megerősítette, hogy óriási igény van arra, hogy legyen valaki, akivel meg lehet beszélni a szülőség hozta megpróbáltatásokat. Ezért hoztam létre a KéSzülőt.</p>
   </div>
   <!--itemek helyes id class fontos-->
+  <div class="form-group">
+      <label>Szűrés minőség szerint:</label>
+      <select id="item-filter-Category" class="itemCategory" onchange="filterItems()">
+        <option value="">-- Összes kategória --</option>
+        <option value="Szabadföldi"> Szabadföldi </option>
+        <option value="Konténeres"> Konténeres </option>
+      </select>
+  </div>
   <div id="items" class="items-container">
     <p>Betöltés...</p>
   </div>
@@ -123,6 +131,22 @@
 
   // Betöltéskor lefut
   loadItems();
+</script>
+<script>
+   function filterItems() {
+    const filterValue = document.getElementById("item-filter-Category").value;
+    const cards = document.getElementById("items-Container").getElementsByClassName("item-card");
+    Array.from(cards).forEach(card => {
+      const category = card.querySelector("p strong").nextSibling.textContent.trim();
+      if (!filterValue || category === filterValue) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  
 </script>
 </body>
 </html>
