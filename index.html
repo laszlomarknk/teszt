@@ -135,7 +135,7 @@
 <script>
    function filterItems() {
     const filterValue = document.getElementById("item-filter-Category").value;
-    const cards = document.getElementById("items-Container").getElementsByClassName("item-card");
+    const cards = document.getElementById("items").getElementsByClassName("item-card");
     Array.from(cards).forEach(card => {
       const category = card.querySelector(".categoriesquality").textContent.trim();
       if (!filterValue || category === filterValue) {
