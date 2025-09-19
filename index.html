@@ -139,6 +139,9 @@
     Array.from(cards).forEach(card => {
       const categoryEl = card.querySelector(".categoriesquality");
       const category = categoryEl ? categoryEl.textContent.trim() : "";
+
+      console.log("Kártya kategória:", category, "| Szűrés érték:", filterValue);
+      
       if (!filterValue || category === filterValue) {
         card.style.display = "";
       } else {
