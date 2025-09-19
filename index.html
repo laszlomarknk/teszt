@@ -100,9 +100,9 @@
           const div = document.createElement("div");
           div.className = "item-card";
           div.innerHTML = `
+            ${itemData.image ? `<img src="${itemData.image}" loading="lazy" sizes="(max-width: 1186px) 100vw, 1186px" class="item-image" alt="Item kép"/>` : ""}
             <h3 class="item-title">${itemData.title || "Névtelen elem"}</h3>
             <p class="item-text">${itemData.description || ""}</p>
-            ${itemData.image ? `<img src="${itemData.image}" loading="lazy" sizes="(max-width: 1186px) 100vw, 1186px" class="item-image" alt="Item kép"/>` : ""}
           `;
           container.appendChild(div);
         }
