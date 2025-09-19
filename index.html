@@ -44,6 +44,7 @@
     <h1 class="heading">Ismerj meg</h1>
     <p class="paragraph-16">Lakatos Anita vagyok Csecsemő-és Gyermekápoló, dúla. Emellett okleveles elsősegély oktató, babamasszázs oktató, önkéntes szoptatási segítő és kismamamasszőr. <br>‍<br>Hivatásomat 2018-ban a veszprémi megyei kórház szülészet-és újszülött osztályán kezdtem, majd 2 és fél év elteltével egy budapesti magánklinika szülészetén folytattam. Fő feladatom az újszülöttek ellátása, ápolása, a szoptatásban való segítségnyújtás. Segítek a szülőknek elsajátítani a gyakorlati feladatokat, hogy gyermeküket már otthon, a kórházi napok után biztonságban láthassák el. Legfontosabbnak az újszülött és a szülei közötti kapcsolat kialakításában való segítségnyújtást tartom, emellett pedig az édesanya és édesapa szüléssel kapcsolatos élményeinek átbeszélésére, feldolgozására is nagy hangsúlyt fektetek. Munkám során mindennap szembesülök a szülés utáni csodás pillanatokkal, de a nehézségekkel is ,amivel a szülők találkoznak. <br>‍<br>Ezen tapasztalataim után döntöttem úgy, hogy szeretném a szülőket felkészíteni a teljes körű babavárásra. Ezért is végeztem el fő végzettségem mellé, Békés Emőke 2 éves dúlaképzését, melynek első szülés kísérésem egy ukrán menekült édesanya lehetett. <br><br>Fő motivációm és küldetés tudatom, hogy legyen egy olyan kapaszkodó a szülők számára, ahol nincs tabu téma, bármit megkérdezhetnek, fejlődhetnek, tanulhatnak, gyakorlatot és magabiztosságot szerezhetnek gyermekük érkezéséig, kaphatnak egy olyan lelki támaszt ,ami segítheti őket átlendülni a nehéz időszakokon. Ezt a 2022-ben végzett piackutatásom is megerősítette, hogy óriási igény van arra, hogy legyen valaki, akivel meg lehet beszélni a szülőség hozta megpróbáltatásokat. Ezért hoztam létre a KéSzülőt.</p>
   </div>
+  <!--itemek helyes id class fontos-->
   <div id="items" class="items-container">
     <p>Betöltés...</p>
   </div>
@@ -103,6 +104,14 @@
             ${itemData.image ? `<img src="${itemData.image}" loading="lazy" sizes="(max-width: 1186px) 100vw, 1186px" class="item-image" alt="Item kép"/>` : ""}
             <h3 class="item-title">${itemData.title || "Névtelen elem"}</h3>
             <p class="item-text">${itemData.description || ""}</p>
+            <p class="item-text">${itemData.category || ""}</p>
+            <p class="item-text">${itemData.categoriesquality || ""}</p>
+            <p class="item-text">${itemData.categorieslevel || ""}</p>
+            <p class="item-text">${itemData.categoriesnoves || ""}</p>
+            <p class="item-text">${itemData.categoriesmeret || ""}</p>
+            <p class="item-text">${itemData.categorieshakonteneres || ""}</p>
+            <p class="item-text">${itemData.categorieshakonteneres2 || ""}</p>
+            <p class="item-text">${itemData.categorieshanemkonteneres || ""}</p>
           `;
           container.appendChild(div);
         }
