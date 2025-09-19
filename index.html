@@ -137,7 +137,8 @@
     const filterValue = document.getElementById("item-filter-Category").value;
     const cards = document.getElementById("items").getElementsByClassName("item-card");
     Array.from(cards).forEach(card => {
-      const category = card.querySelector(".categoriesquality").textContent.trim();
+      const categoryEl = card.querySelector(".categoriesquality");
+      const category = categoryEl ? categoryEl.textContent.trim() : "";
       if (!filterValue || category === filterValue) {
         card.style.display = "";
       } else {
