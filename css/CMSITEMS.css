@@ -79,7 +79,8 @@
 }
 .form-group {
   max-width: 300px;       /* ne legyen szélesebb, mint a kártyák */
-  margin: 0 auto 30px;    /* középre igazítás és alatta hely */
+  margin-bottom: 30px;
+  margin-left: 0px;/* középre igazítás és alatta hely */
   display: flex;
   flex-direction: column;
   gap: 8px;               /* kis távolság a label és select között */
