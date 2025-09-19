@@ -1,0 +1,59 @@
+/* konténer beállítása */
+.items-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  /* FIX: rögzített 300px oszlopok, így ha a sor nincs tele a kártyák középre igazodnak */
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 20px; /* távolság a kártyák között */
+  box-sizing: border-box;
+  justify-content: center; /* a teljes grid középre igazítása */
+  justify-items: center;   /* az egyes cellák tartalmának középre igazítása (utolsó sor is középre kerül) */
+}
+
+/* kártyák dizájnja */
+.item-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #ddd; /* halvány szürke border */
+  border-radius: 12px; /* lekerekített sarkok */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* enyhe árnyék */
+  padding: 16px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* hover effekt */
+.item-card:hover {
+  transform: scale(1.03);
+}
+
+/* kép középre igazítása */
+.item-card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 12px auto; /* középre és alul kis távolság */
+  border-radius: 8px;
+}
+
+/* cím */
+.item-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 8px 0;
+  color: #333;
+}
+
+/* szöveg */
+.item-text {
+  flex-grow: 1; /* szöveg kitölti a rendelkezésre álló helyet */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  text-align: justify;
+}
