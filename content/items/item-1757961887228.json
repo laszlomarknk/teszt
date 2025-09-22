@@ -2,12 +2,12 @@
   "title": "tizenegyedikitemcim2",
   "description": "tizenegyedikitemleiras2",
   "category": "qrkód",
-  "categoriesquality": "Szabadföldi",
-  "categorieslevel": "",
-  "categoriesnoves": "",
-  "categoriesmeret": "",
-  "categorieshakonteneres": "",
-  "categorieshakonteneres2": "",
+  "categoriesquality": "Konténeres",
+  "categorieslevel": "Levél",
+  "categoriesnoves": "Közepes",
+  "categoriesmeret": "100 - 125 cm",
+  "categorieshakonteneres": "1.5L",
+  "categorieshakonteneres2": "Törzsesek",
   "categorieshanemkonteneres": "",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758311426869-edited-1758311422671.png"
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758531003846-edited-1758530983296.png"
 }
