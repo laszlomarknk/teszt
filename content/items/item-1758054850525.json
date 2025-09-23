@@ -1,13 +1,19 @@
 {
   "title": "iiiiüüü",
+  "latin": "undefined",
   "description": "őőőő",
+  "descriptionall": "undefined",
   "category": "áááá",
   "categoriesquality": "Konténeres",
   "categorieslevel": "Levél",
   "categoriesnoves": "Lassú",
   "categoriesmeret": "175 - 200 cm",
-  "categorieshakonteneres": "24L",
+  "itemprice": "undefined",
   "categorieshakonteneres2": "Rózsák",
   "categorieshanemkonteneres": "",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758227241844-edited-1758227224029.png"
+  "itemlight": "undefined",
+  "itemground": "undefined",
+  "itemusage": "undefined",
+  "itemlabels": "undefined",
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758654975497-edited-1758654974477.png"
 }
