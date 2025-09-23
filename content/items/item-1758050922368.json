@@ -1,13 +1,19 @@
 {
   "title": "éáláf",
+  "latin": "undefined",
   "description": "dadasd",
+  "descriptionall": "undefined",
   "category": "áááá",
   "categoriesquality": "Konténeres",
   "categorieslevel": "Tűlevél",
   "categoriesnoves": "Gyors",
   "categoriesmeret": "125 - 150 cm",
-  "categorieshakonteneres": "2L",
+  "itemprice": "undefined",
   "categorieshakonteneres2": "Törzsesek",
   "categorieshanemkonteneres": "",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758531422103-rick.jpg"
+  "itemlight": "undefined",
+  "itemground": "undefined",
+  "itemusage": "undefined",
+  "itemlabels": "undefined",
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758654991827-edited-1758654991065.png"
 }
