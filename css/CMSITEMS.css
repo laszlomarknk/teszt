@@ -25,7 +25,6 @@
   padding: 16px;
   box-sizing: border-box;
   transition: transform 0.2s ease-in-out;
-  width: 300px;
 }
 
 /* hover effekt */
@@ -36,8 +35,9 @@
 /* kép középre igazítása */
 .item-card img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  /*max-width: 100%;*/
+  width: 290px;
+  height: 194px;
   margin: 0 auto 12px auto; /* középre és alul kis távolság */
   border-radius: 8px;
 }
@@ -68,22 +68,29 @@
 /* Szűrő formázása */
 .filter-container{
   max-width: 1500px;
-  display: flex;
-  justify-content: left;
-  justify-items: left;
-  align-items: left;
+ 
+  
   margin-left: auto;
   margin-right: auto;
-  
-
+  display: grid;
+  /* FIX: rögzített 300px oszlopok, így ha a sor nincs tele a kártyák középre igazodnak */
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 20px; /* távolság a kártyák között */
+  box-sizing: border-box;
+  justify-content: center; /* a teljes grid középre igazítása */
+  justify-items: center; 
 }
 .form-group {
-  max-width: 300px;       /* ne legyen szélesebb, mint a kártyák */
-  margin-bottom: 30px;
-  margin-left: 0px;/* középre igazítás és alatta hely */
+  width: 300px;       /* ne legyen szélesebb, mint a kártyák */
+  margin-bottom: 16px;
+  margin-left: auto;/* középre igazítás és alatta hely */
+  margin-right: auto;
   display: flex;
   flex-direction: column;
-  gap: 8px;               /* kis távolság a label és select között */
+  padding: 16px;               /* kis távolság a label és select között */
+  padding-top: 0px;
+  box-sizing: border-box;
+  
 }
 
 /* Label dizájn */
@@ -113,5 +120,75 @@
   outline: none;
 }
 
+/* kategóriák előtagjai hogy a szures mukodjon es ne vegye bele a szurobe az elotagokat */
 
+.categoriesquality::before {
+  content: "Minőség: ";
+}
+.categorieslevel::before {
+  content: "Levél: ";
+}
+.categoriesnoves::before {
+  content: "Növés sebessége: ";
+}
+.categoriesmeret::before {
+  content: "Méret: ";
+}
 
+/*.categorieshakonteneres2 .categorieshanemkonteneres .inline {
+  display: inline-block;
+
+} */
+/* Modal alapstílus */
+#item-modal {
+  display: none; /* alapból rejtve */
+  position: fixed; /* mindig a képernyőn marad */
+  flex-direction: row;
+  flex-wrap: wrap;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* félátlátszó háttér */
+  z-index: 9999; /* legfelül legyen mindenhez képest */
+  overflow-y: auto; /* ha sok a tartalom, lehessen scrollozni */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.modal img {
+  width: 600px;
+  height: 400px;
+}
+/* Modal tartalom */
+#item-modal .modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-height: 80vh; /* ne legyen túl magas */
+  overflow-y: auto; /* belső scroll ha kell */
+  position: relative;
+  width: 90%;
+  max-width: 1200px; /* ne legyen túl széles */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Bezáró X gomb */
+#modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10000;
+}
+.main-content {
+  flex: 1;
+  margin-left: 20px;
+}
+.header-content {
+  display: flex;
+  align-content: space-between;
+  flex: 1;
+  margin-left: 20px;
+}
