@@ -1,13 +1,19 @@
 {
   "title": "tizedikitemcim2",
+  "latin": "undefined",
   "description": "tizedikitemleiras2",
+  "descriptionall": "undefined",
   "category": "qrkód",
   "categoriesquality": "Szabadföldi",
   "categorieslevel": "Tűlevél",
   "categoriesnoves": "Közepes",
   "categoriesmeret": "175 - 200 cm",
-  "categorieshakonteneres": "",
+  "itemprice": "undefined",
   "categorieshakonteneres2": "",
   "categorieshanemkonteneres": "Fenyő",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758530959926-edited-1758530947142.png"
+  "itemlight": "undefined",
+  "itemground": "undefined",
+  "itemusage": "undefined",
+  "itemlabels": "undefined",
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758655021183-edited-1758655020040.png"
 }
