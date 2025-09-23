@@ -1,13 +1,19 @@
 {
   "title": "áááá",
+  "latin": "undefined",
   "description": "ada",
+  "descriptionall": "undefined",
   "category": "áááá",
   "categoriesquality": "Szabadföldi",
   "categorieslevel": "Levél",
   "categoriesnoves": "Lassú",
   "categoriesmeret": "30 - 50 cm",
-  "categorieshakonteneres": "",
+  "itemprice": "undefined",
   "categorieshakonteneres2": "",
   "categorieshanemkonteneres": "Törzsesek",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758531412558-konyha.png"
+  "itemlight": "undefined",
+  "itemground": "undefined",
+  "itemusage": "undefined",
+  "itemlabels": "undefined",
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758654988014-edited-1758654987069.png"
 }
