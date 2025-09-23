@@ -1,13 +1,19 @@
 {
   "title": "asd2",
+  "latin": "undefined",
   "description": "asdd2",
+  "descriptionall": "undefined",
   "category": "kekhatter",
   "categoriesquality": "Konténeres",
   "categorieslevel": "Levél",
   "categoriesnoves": "Közepes",
   "categoriesmeret": "150 - 200 cm",
-  "categorieshakonteneres": "9.5L",
+  "itemprice": "undefined",
   "categorieshakonteneres2": "Díszfák",
   "categorieshanemkonteneres": "",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758531095099-edited-1758531082415.png"
+  "itemlight": "undefined",
+  "itemground": "undefined",
+  "itemusage": "undefined",
+  "itemlabels": "undefined",
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758654970372-edited-1758654967817.png"
 }
