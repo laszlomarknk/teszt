@@ -1,13 +1,19 @@
 {
   "title": "tizenegyedikitemcim2",
+  "latin": "undefined",
   "description": "tizenegyedikitemleiras2",
+  "descriptionall": "undefined",
   "category": "qrkód",
   "categoriesquality": "Konténeres",
   "categorieslevel": "Levél",
   "categoriesnoves": "Közepes",
   "categoriesmeret": "100 - 125 cm",
-  "categorieshakonteneres": "1.5L",
+  "itemprice": "undefined",
   "categorieshakonteneres2": "Törzsesek",
   "categorieshanemkonteneres": "",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758531003846-edited-1758530983296.png"
+  "itemlight": "undefined",
+  "itemground": "undefined",
+  "itemusage": "undefined",
+  "itemlabels": "undefined",
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758655015729-edited-1758655013876.png"
 }
