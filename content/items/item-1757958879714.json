@@ -1,13 +1,19 @@
 {
   "title": "harmadikitemcime2",
+  "latin": "undefined",
   "description": "harmadikitemleiras2",
+  "descriptionall": "undefined",
   "category": "kep",
   "categoriesquality": "Szabadföldi",
   "categorieslevel": "",
   "categoriesnoves": "",
   "categoriesmeret": "",
-  "categorieshakonteneres": "",
+  "itemprice": "undefined",
   "categorieshakonteneres2": "",
   "categorieshanemkonteneres": "",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758311455353-edited-1758311450786.png"
+  "itemlight": "undefined",
+  "itemground": "undefined",
+  "itemusage": "undefined",
+  "itemlabels": "undefined",
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758655048956-edited-1758655044825.png"
 }
