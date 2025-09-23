@@ -1,13 +1,19 @@
 {
   "title": "hatodikitemcim2",
+  "latin": "undefined",
   "description": "hatodikitemleiras2",
+  "descriptionall": "undefined",
   "category": "kekhatter",
   "categoriesquality": "Konténeres",
   "categorieslevel": "",
   "categoriesnoves": "",
   "categoriesmeret": "",
-  "categorieshakonteneres": "",
+  "itemprice": "undefined",
   "categorieshakonteneres2": "",
   "categorieshanemkonteneres": "",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758311465989-edited-1758311461310.png"
+  "itemlight": "undefined",
+  "itemground": "undefined",
+  "itemusage": "undefined",
+  "itemlabels": "undefined",
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758655062386-edited-1758655059263.png"
 }
