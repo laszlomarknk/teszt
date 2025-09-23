@@ -1,13 +1,19 @@
 {
   "title": "kilencedikitemcim2",
+  "latin": "undefined",
   "description": "kilencedikitemleiras2",
+  "descriptionall": "undefined",
   "category": "qrkód",
   "categoriesquality": "Szabadföldi",
   "categorieslevel": "Levél",
   "categoriesnoves": "Lassú",
   "categoriesmeret": "60 - 70 cm",
-  "categorieshakonteneres": "",
+  "itemprice": "undefined",
   "categorieshakonteneres2": "",
   "categorieshanemkonteneres": "Fenyő",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758531025414-edited-1758531008173.png"
+  "itemlight": "undefined",
+  "itemground": "undefined",
+  "itemusage": "undefined",
+  "itemlabels": "undefined",
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758655040006-edited-1758655037146.png"
 }
