@@ -1,13 +1,19 @@
 {
   "title": "éééééééééééééééééé",
+  "latin": "undefined",
   "description": "ééééééééééééé",
+  "descriptionall": "undefined",
   "category": "éééééééééééé",
   "categoriesquality": "Szabadföldi",
   "categorieslevel": "Tűlevél",
   "categoriesnoves": "Közepes",
   "categoriesmeret": "30 - 50 cm",
-  "categorieshakonteneres": "",
+  "itemprice": "undefined",
   "categorieshakonteneres2": "",
   "categorieshanemkonteneres": "Fenyő",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758530903020-edited-1758530893145.png"
+  "itemlight": "undefined",
+  "itemground": "undefined",
+  "itemusage": "undefined",
+  "itemlabels": "undefined",
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758654980959-edited-1758654978946.png"
 }
