@@ -1,13 +1,19 @@
 {
   "title": "asder",
+  "latin": "undefined",
   "description": "asderleiras",
+  "descriptionall": "undefined",
   "category": "kekhatter",
   "categoriesquality": "Szabadföldi",
   "categorieslevel": "Tűlevél",
   "categoriesnoves": "Lassú",
   "categoriesmeret": "100 - 125 cm",
-  "categorieshakonteneres": "",
+  "itemprice": "undefined",
   "categorieshakonteneres2": "",
   "categorieshanemkonteneres": "Cserjék",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758530978047-edited-1758530966691.png"
+  "itemlight": "undefined",
+  "itemground": "undefined",
+  "itemusage": "undefined",
+  "itemlabels": "undefined",
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758655011466-edited-1758655009391.png"
 }
