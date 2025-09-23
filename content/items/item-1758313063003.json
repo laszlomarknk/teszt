@@ -1,13 +1,19 @@
 {
   "title": "egyikse",
+  "latin": "undefined",
   "description": "egyikse",
+  "descriptionall": "undefined",
   "category": "",
   "categoriesquality": "",
   "categorieslevel": "",
   "categoriesnoves": "",
   "categoriesmeret": "",
-  "categorieshakonteneres": "",
+  "itemprice": "undefined",
   "categorieshakonteneres2": "",
   "categorieshanemkonteneres": "",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758313062173-Opera_Pillanatfelv%C3%A9tel_2025-08-24_182720_tally.so.png"
+  "itemlight": "undefined",
+  "itemground": "undefined",
+  "itemusage": "undefined",
+  "itemlabels": "undefined",
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758654944524-edited-1758654929828.png"
 }
