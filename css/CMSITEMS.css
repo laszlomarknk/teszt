@@ -247,6 +247,16 @@ body.no-scroll {
   padding-right: var(--scrollbar-width, 17px); /* átlagos scrollbar ~17px */
 }
 
+.maps-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.iframe {
+  width: 50vw; 
+  height: 35vw;
+  border: 0;
+}
 
 
 
