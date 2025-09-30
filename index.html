@@ -45,7 +45,7 @@
     <p class="paragraph-16">Lakatos Anita vagyok Csecsemő-és Gyermekápoló, dúla. Emellett okleveles elsősegély oktató, babamasszázs oktató, önkéntes szoptatási segítő és kismamamasszőr. <br>‍<br>Hivatásomat 2018-ban a veszprémi megyei kórház szülészet-és újszülött osztályán kezdtem, majd 2 és fél év elteltével egy budapesti magánklinika szülészetén folytattam. Fő feladatom az újszülöttek ellátása, ápolása, a szoptatásban való segítségnyújtás. Segítek a szülőknek elsajátítani a gyakorlati feladatokat, hogy gyermeküket már otthon, a kórházi napok után biztonságban láthassák el. Legfontosabbnak az újszülött és a szülei közötti kapcsolat kialakításában való segítségnyújtást tartom, emellett pedig az édesanya és édesapa szüléssel kapcsolatos élményeinek átbeszélésére, feldolgozására is nagy hangsúlyt fektetek. Munkám során mindennap szembesülök a szülés utáni csodás pillanatokkal, de a nehézségekkel is ,amivel a szülők találkoznak. <br>‍<br>Ezen tapasztalataim után döntöttem úgy, hogy szeretném a szülőket felkészíteni a teljes körű babavárásra. Ezért is végeztem el fő végzettségem mellé, Békés Emőke 2 éves dúlaképzését, melynek első szülés kísérésem egy ukrán menekült édesanya lehetett. <br><br>Fő motivációm és küldetés tudatom, hogy legyen egy olyan kapaszkodó a szülők számára, ahol nincs tabu téma, bármit megkérdezhetnek, fejlődhetnek, tanulhatnak, gyakorlatot és magabiztosságot szerezhetnek gyermekük érkezéséig, kaphatnak egy olyan lelki támaszt ,ami segítheti őket átlendülni a nehéz időszakokon. Ezt a 2022-ben végzett piackutatásom is megerősítette, hogy óriási igény van arra, hogy legyen valaki, akivel meg lehet beszélni a szülőség hozta megpróbáltatásokat. Ezért hoztam létre a KéSzülőt.</p>
   </div>
   <!--itemek helyes id class fontos     masolas innen-->
-  <div id="item-modal" class="modal" style="display:none;">
+  <div id="item-modal" class="modal" >
     <div class="modal-content">
       <span id="modal-close">&times;</span>
       <div id="modal-body"></div>
@@ -144,9 +144,11 @@
         </select>
     </div>
   </div>
+  <div class="overlay" id="overlay"></div>
   <div id="items" class="items-container">
     <p>Betöltés...</p>
   </div>
+  <!--<div class="overlay"></div>-->
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.166916903983!2d17.030317325829692!3d46.445389616275826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476892f9d1abeae9%3A0xfdd0c62def7ce83!2zRWd6w7N0YSBEw61zemZhaXNrb2xh!5e0!3m2!1sen!2shu!4v1758655599324!5m2!1sen!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   <!--masolas idaig-->
   <div class="rl_footer4_component">
@@ -213,8 +215,10 @@
             <p class="item-text categoriesnoves">${itemData.categoriesnoves || ""}</p>
             <p class="item-text categoriesmeret">${itemData.categoriesmeret || ""}</p>
             ${itemData.categorieshakonteneres 
-            ? `<p class="item-text categorieshakonteneres">Konténer méret: ${itemData.categorieshakonteneres}</p>` 
-            : ""}
+             ? `<p class="item-text categorieshakonteneres" data-value="${itemData.categorieshakonteneres}">
+              Konténer méret: ${itemData.categorieshakonteneres}
+             </p>` 
+             : ""}
             <p class="inline">Típus: 
             <span class="item-text categorieshakonteneres2">${itemData.categorieshakonteneres2 || ""}</span>
             <span class="item-text categorieshanemkonteneres">${itemData.categorieshanemkonteneres || ""}</span>
@@ -234,6 +238,7 @@
 </script>
 <script>  // masolas script
    function filterItems() {
+    //alert("filterItems");
     const filterValuequality = document.getElementById("item-filter-Category-quality").value;
     const filterValuelevel = document.getElementById("item-filter-Category-level").value;
     const filterValuenoves = document.getElementById("item-filter-Category-noves").value;
@@ -241,7 +246,7 @@
     const filterValuehakonteneres = document.getElementById("item-filter-Category-hakonteneres").value;
     const filterValuehakonteneres2 = document.getElementById("item-filter-Category-hakonteneres2").value;
     const filterValuehanemkonteneres = document.getElementById("item-filter-Category-hanemkonteneres").value;
-
+    //alert("filtervaluehakonteneres: " + filterValuehakonteneres);
 
     const cards = document.getElementById("items").getElementsByClassName("item-card");
 
@@ -260,7 +265,9 @@
       const categorymeret = categorymer ? categorymer.textContent.trim() : "";
 
       const categoryhakont = card.querySelector(".categorieshakonteneres");
-      const categoryhakonteneres = categoryhakont ? categoryhakont.textContent.trim() : "";
+      const categoryhakonteneres = categoryhakont 
+      ? categoryhakont.getAttribute("data-value").trim() : "";
+      //alert("categoryhakonteneres: " + categoryhakont);
       
       const categoryhakont2 = card.querySelector(".categorieshakonteneres2");
       const categoryhakonteneres2 = categoryhakont2 ? categoryhakont2.textContent.trim() : "";
@@ -332,23 +339,48 @@
         <p><strong>Felhasználás:</strong> ${itemData.itemusage || "Nincs"}</p>
       </div>
     </div>
-    <div class="extra-content">
-      <p><strong>Címkék:</strong> ${itemData.itemlabels || "Nincs"}</p>
-      <p><strong>Item ID:</strong> ${itemData.ID || "Nincs"}</p>
-    </div>
-      `;
+    `;
+    //<div class="extra-content">
+   //   <p><strong>Címkék:</strong> ${itemData.itemlabels || "Nincs"}</p>
+  //    <p><strong>Item ID:</strong> ${itemData.ID || "Nincs"}</p>
+  //  </div>
 
       // Popup megjelenítése
-      document.getElementById("item-modal").style.display = "flex";
-    
+     // document.getElementById("item-modal").classList.add("active");
+     // document.getElementById("item-modal").style.display = "flex";
+    //  const overlay = document.querySelector(".overlay");
+      //overlay.className= "overlay active";    //opacity a bodynak
+     // document.body.classList.add("no-scroll");   //body-t nem lehet gorgetni
+
+
+      document.getElementById("item-modal").classList.add("active");
+      document.getElementById("overlay").classList.add("active");
+      document.body.classList.add("no-scroll");
+   
   }
 });
 
 // Bezárás
-document.getElementById("modal-close").addEventListener("click", () => {
-  document.getElementById("item-modal").style.display = "none";
+//document.getElementById("modal-close").addEventListener("click", () => {
+// document.getElementById("item-modal").classList.remove("active");
+ // document.getElementById("item-modal").style.display = "none";
+ // const overlay = document.querySelector(".overlay");
+  //overlay.className= "overlay default";
+ // document.body.classList.remove("no-scroll");
+  document.getElementById("modal-close").addEventListener("click", () => {
+  document.getElementById("item-modal").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
+  document.body.classList.remove("no-scroll");
 });
+  document.getElementById("overlay").addEventListener("click", () => {
+  document.getElementById("item-modal").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
+  document.body.classList.remove("no-scroll");
+});
+  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+  document.body.style.setProperty("--scrollbar-width", `${scrollbarWidth}px`);
 
 </script>
+
 </body>
 </html>
