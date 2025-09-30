@@ -259,6 +259,14 @@ body.no-scroll {
 }
 
 
+@media (max-width: 479px) {
+  .iframe {
+    max-width: 300px;
+    width: 90vw; 
+    height: 60vw;
+    max-height: 210px;
+  }
+}
 
 @media (max-width: 1200px) {
   #item-modal .modal-content {
