@@ -262,8 +262,8 @@ body.no-scroll {
 @media (max-width: 479px) {
   .iframe {
     max-width: 300px;
-    width: 90vw; 
-    height: 60vw;
+    width: auto; 
+    height: auto;
     max-height: 210px;
   }
 }
