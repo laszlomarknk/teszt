@@ -335,7 +335,7 @@ body.no-scroll {
     max-width: 100%;
     height: auto;
     border-top-right-radius: 0px;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/4;
   }
 }
 
