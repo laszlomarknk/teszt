@@ -258,21 +258,6 @@ body.no-scroll {
   height: 35vw;
   border: 0;
 }
-@media (max-width: 479px) {
-  .iframe {
-    max-width: 300px;
-    width: auto; 
-    height: auto;
-    max-height: 210px;
-  }
-  .modal img {
-    width:100%;
-    max-width: 100%;
-    height: auto;
-    border-top-right-radius: 0px;
-    aspect-ratio: 4/3;
-  }
-}
 
 
 
@@ -299,7 +284,7 @@ body.no-scroll {
     grid-template-rows: auto auto;
     
    
-    }
+  }
   .img-container {
     width: 100%;
     max-width: 100%;
@@ -320,24 +305,39 @@ body.no-scroll {
   }
   .header-content > :nth-child(-n+1) {
   justify-self: center; /* vízszintesen középre */
-  }
-  #modal-close {
-    top: 10px;
-    right: 10px;
-    font-size: 40px;
-    color: #f0f0f0;
-  }
-  .main-content {
-    background-color: #fff;
-    margin: 0px;
-    margin-top: -5px;
-    padding: 20px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    /*border-top: 2px solid #888;*/
-  }
+}
+#modal-close {
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  color: #f0f0f0;
+}
+.main-content {
+  background-color: #fff;
+  margin: 0px;
+  margin-top: -5px;
+  padding: 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  /*border-top: 2px solid #888;*/
+}
 }
 
+@media (max-width: 479px) {
+  .iframe {
+    max-width: 300px;
+    width: auto; 
+    height: auto;
+    max-height: 210px;
+  }
+  .modal img {
+    width:100%;
+    max-width: 100%;
+    height: auto;
+    border-top-right-radius: 0px;
+    aspect-ratio: 4/3;
+  }
+}
 
 /* Teljes scrollbar */
 #item-modal .modal-content::-webkit-scrollbar {
