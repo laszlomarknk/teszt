@@ -247,6 +247,7 @@ body.no-scroll {
   padding-right: var(--scrollbar-width, 17px); /* átlagos scrollbar ~17px */
 }
 
+
 .maps-container {
   display: flex;
   justify-content: center;
@@ -257,51 +258,84 @@ body.no-scroll {
   height: 35vw;
   border: 0;
 }
-
-
 @media (max-width: 479px) {
   .iframe {
     max-width: 300px;
-    width: 300px; 
-    height: 210px;
+    width: auto; 
+    height: auto;
     max-height: 210px;
+  }
+  .modal img {
+    width:100%;
+    max-width: 100%;
+    height: auto;
+    border-top-right-radius: 0px;
+    aspect-ratio: 4/3;
   }
 }
 
+
+
+
+
 @media (max-width: 1200px) {
   #item-modal .modal-content {
+    margin-left: 12px;
     background-color: #fff;
-    padding: 10px;
+    padding: 0px;
     border-radius: 8px;
     max-height: auto;
     position: relative;
     width: 90%;
     max-width: 1200px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border: 0px;
   }
   
   .header-content {
-    padding: 15px;
-    
+    /*padding: 15px; */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    
    
     }
   .img-container {
     width: 100%;
+    max-width: 100%;
     text-align: center;
-    padding-top: 10px;
-    margin-left: 12px;
-    margin-bottom: 15px;
+    /*padding-top: 10px;*/
+    /*padding-left: 12px;*/
+    /*margin-bottom: 15px;*/
+    border-radius: 0px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 0px;
   }
   .modal img {
     width:100%;
+    max-width: 100%;
     height: auto;
+    border-top-right-radius: 0px;
+    aspect-ratio: 16/9;
   }
   .header-content > :nth-child(-n+1) {
   justify-self: center; /* vízszintesen középre */
-}
+  }
+  #modal-close {
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    color: #f0f0f0;
+  }
+  .main-content {
+    background-color: #fff;
+    margin: 0px;
+    margin-top: -5px;
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    /*border-top: 2px solid #888;*/
+  }
 }
 
 
