@@ -108,6 +108,9 @@
 }
 
 /* kategóriák előtagjai */
+.description::before {
+  content: "Rövid leírás: ";
+}
 .categoriesquality::before {
   content: "Minőség: ";
 }
