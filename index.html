@@ -51,9 +51,35 @@
       <div id="modal-body"></div>
     </div>
   </div>
-
-  <div class="filter-container">
-    <div class="form-group">
+  
+  
+</div>
+<div class="filter-container">
+  <!--<div class="search-button-container"> -->
+    <div class="search-button-content">
+      <input type="text" id="search-category" class="search-button-field" placeholder="Keresés...">
+      <button class="search-button" onclick="filterItemsBySearch()"></button>
+    </div>
+  <!--</div> -->
+  <div class="form-group kategoria-filter">
+        <label>Szűrés kategória szerint:</label>
+        <select id="item-filter-Categories" class="itemCategory" onchange="filterItems()">
+          <option value="">-- Összes kategória --</option>
+          <option value="Cserjék">   Cserjék   </option>
+          <option value="Lomblevelű örökzöldek">   Lomblevelű örökzöldek   </option>
+          <option value="Pikkelyes fenyők">   Pikkelyes fenyők   </option>
+          <option value="Sövénynövények">   Sövénynövények   </option>
+          <option value="Tűlevelű fenyők">   Tűlevelű fenyők   </option>
+          <option value="Fák">   Fák   </option>
+          <option value="Talajtakarók">   Talajtakarók   </option>
+          <option value="Szoliterek">   Szoliterek   </option>
+        </select>
+    </div>
+ <!--<div class="form-group szurok-gomb">
+      <label></label>
+      <button class="all-filters-button" onclick="showhidefilters()">További szűrők</button>
+    </div>   -->
+    <div class="form-group displayhidden">
         <label>Szűrés minőség szerint:</label>
         <select id="item-filter-Category-quality" class="itemCategory" onchange="filterItems()">
           <option value="">-- Összes kategória --</option>
@@ -61,7 +87,7 @@
           <option value="Konténeres"> Konténeres </option>
         </select>
     </div>
-    <div class="form-group">
+    <div class="form-group displayhidden">
         <label>Szűrés levél típus szerint:</label>
         <select id="item-filter-Category-level" class="itemCategory" onchange="filterItems()">
           <option value="">-- Összes kategória --</option>
@@ -69,7 +95,7 @@
           <option value="Tűlevél"> Tűlevél </option>
         </select>
     </div>
-    <div class="form-group">
+    <div class="form-group displayhidden">
         <label>Szűrés növekedési sebesség szerint:</label>
         <select id="item-filter-Category-noves" class="itemCategory" onchange="filterItems()">
           <option value="">-- Összes kategória --</option>
@@ -78,36 +104,7 @@
           <option value="Gyors"> Gyors </option>
         </select>
     </div>
-    <div class="form-group">
-        <label>Szűrés méret szerint:</label>
-        <select id="item-filter-Category-meret" class="itemCategory" onchange="filterItems()">
-          <option value="">-- Összes kategória --</option>
-          <option value="15 - 20 cm">   15 - 20 cm   </option>
-          <option value="20 - 30 cm">   20 - 30 cm   </option>
-          <option value="20 - 40 cm">   20 - 40 cm   </option>
-          <option value="30 - 40 cm">   30 - 40 cm   </option>
-          <option value="30 - 50 cm">   30 - 50 cm   </option>
-          <option value="40 - 60 cm">   40 - 60 cm   </option>
-          <option value="50+ cm">   50+ cm   </option>
-          <option value="60 - 70 cm">   60 - 70 cm   </option>
-          <option value="60 - 80 cm">   60 - 80 cm   </option>
-          <option value="80 - 100 cm">   80 - 100 cm   </option>
-          <option value="100 - 125 cm">   100 - 125 cm   </option>
-          <option value="125 - 150 cm">   125 - 150 cm   </option>
-          <option value="150+ cm">   150+ cm   </option>
-          <option value="150 - 175 cm">   150 - 175 cm   </option>
-          <option value="150 - 200 cm">   150 - 200 cm   </option>
-          <option value="175+ cm">   175+ cm   </option>
-          <option value="175 - 200 cm">   175 - 200 cm   </option>
-          <option value="180 - 200 cm">   180 - 200 cm   </option>
-          <option value="200+ cm">   200+ cm   </option>
-          <option value="200 - 225 cm">   200 - 225 cm   </option>
-          <option value="225+ cm">   225+ cm   </option>
-          <option value="225 - 250 cm">   225 - 250 cm   </option>
-          <option value="250+ cm">   250+ cm   </option>
-        </select>
-    </div>
-    <div class="form-group">
+    <div class="form-group displayhidden">
         <label>Szűrés konténerméret szerint:</label>
         <select id="item-filter-Category-hakonteneres" class="itemCategory" onchange="filterItems()">
           <option value="">-- Összes kategória --</option>
@@ -122,7 +119,7 @@
           <option value="24L">   24L   </option>
         </select>
     </div>
-    <div class="form-group">
+    <div class="form-group displayhidden">
         <label>Szűrés típus szerint(Konténeres):</label>
         <select id="item-filter-Category-hakonteneres2" class="itemCategory" onchange="filterItems()">
           <option value="">-- Összes kategória --</option>
@@ -133,7 +130,7 @@
           <option value="Díszfák">   Díszfák   </option>
         </select>
     </div>
-    <div class="form-group">
+    <div class="form-group displayhidden">
         <label>Szűrés típus szerint(Szabadföldi):</label>
         <select id="item-filter-Category-hanemkonteneres" class="itemCategory" onchange="filterItems()">
           <option value="">-- Összes kategória --</option>
@@ -143,7 +140,12 @@
           <option value="Cserjék">   Formafa   </option>
         </select>
     </div>
+    <div class="form-group szurok-gomb">
+      <label></label>
+      <button class="all-filters-button" onclick="showhidefilters()">További szűrők</button>
+    </div>
   </div>
+  
   <div class="overlay" id="overlay"></div>
   <div id="items" class="items-container">
     <p>Betöltés...</p>
@@ -215,7 +217,7 @@
             <p class="item-text categoriesquality">${itemData.categoriesquality || ""}</p>
             <p class="item-text categorieslevel">${itemData.categorieslevel || ""}</p>
             <p class="item-text categoriesnoves">${itemData.categoriesnoves || ""}</p>
-            <p class="item-text categoriesmeret">${itemData.categoriesmeret || ""}</p>
+            <p class="item-text categories">${itemData.categories || ""}</p>
             ${itemData.categorieshakonteneres 
              ? `<p class="item-text categorieshakonteneres" data-value="${itemData.categorieshakonteneres}">
               Konténer méret: ${itemData.categorieshakonteneres}
@@ -244,7 +246,7 @@
     const filterValuequality = document.getElementById("item-filter-Category-quality").value;
     const filterValuelevel = document.getElementById("item-filter-Category-level").value;
     const filterValuenoves = document.getElementById("item-filter-Category-noves").value;
-    const filterValuemeret = document.getElementById("item-filter-Category-meret").value;
+    const filterValuecategories = document.getElementById("item-filter-Categories").value;
     const filterValuehakonteneres = document.getElementById("item-filter-Category-hakonteneres").value;
     const filterValuehakonteneres2 = document.getElementById("item-filter-Category-hakonteneres2").value;
     const filterValuehanemkonteneres = document.getElementById("item-filter-Category-hanemkonteneres").value;
@@ -263,8 +265,8 @@
       const categorynov = card.querySelector(".categoriesnoves");
       const categorynoves = categorynov ? categorynov.textContent.trim() : "";
 
-      const categorymer = card.querySelector(".categoriesmeret");
-      const categorymeret = categorymer ? categorymer.textContent.trim() : "";
+      const categori = card.querySelector(".categories");
+      const categories = categori ? categori.textContent.trim() : "";
 
       const categoryhakont = card.querySelector(".categorieshakonteneres");
       const categoryhakonteneres = categoryhakont 
@@ -278,18 +280,14 @@
       const categoryhanemkonteneres = categoryhanemkont ? categoryhanemkont.textContent.trim() : "";
 
 
-
-
-
-
       console.log("Kártya kategória:", categoryquality, "| Szűrés érték:", filterValuequality);
       console.log("Kártya kategória level:", categorylevel, "| Szűrés érték:", filterValuelevel);
-      
+      // szures logikaja
       if (
         (!filterValuequality || categoryquality === filterValuequality)&&
         (!filterValuelevel || categorylevel === filterValuelevel) &&
         (!filterValuenoves || categorynoves === filterValuenoves) &&
-        (!filterValuemeret || categorymeret === filterValuemeret) &&
+        (!filterValuecategories || categories === filterValuecategories) &&
         (!filterValuehakonteneres || categoryhakonteneres === filterValuehakonteneres) &&
         (!filterValuehakonteneres2 || categoryhakonteneres2 === filterValuehakonteneres2) &&
         (!filterValuehanemkonteneres || categoryhanemkonteneres === filterValuehanemkonteneres)
@@ -332,7 +330,7 @@
         <p><strong>Minőség:</strong> ${itemData.categoriesquality || "Nincs"}</p>
         <p><strong>Levél:</strong> ${itemData.categorieslevel || "Nincs"}</p>
         <p><strong>Növés:</strong> ${itemData.categoriesnoves || "Nincs"}</p>
-        <p><strong>Méret:</strong> ${itemData.categoriesmeret || "Nincs"}</p>
+        <p><strong>Méret:</strong> ${itemData.categories || "Nincs"}</p>
         <p><strong>Ár:</strong> ${itemData.itemprice || "Nincs"}</p>
         <p><strong>Kont. Méret:</strong> ${itemData.categorieshakonteneres || "Nincs"}</p>
         <p><strong>Típus:</strong> ${itemData.categorieshakonteneres2 || itemData.categorieshanemkonteneres || "Nincs"}</p>
@@ -381,6 +379,83 @@
 });
   const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
   document.body.style.setProperty("--scrollbar-width", `${scrollbarWidth}px`);
+
+</script>
+<script>
+
+  function showhidefilters() {
+  const elements = document.querySelectorAll(".form-group");
+
+  if (elements.length === 0) return; // ha nincs ilyen elem, ne fusson tovább
+
+  // Ellenőrizzük az első elem állapotát
+  const currentlyHidden = elements[3].classList.contains("displayhidden");
+
+  if (currentlyHidden) {
+    // Ha rejtve vannak, akkor most megjelenítjük mindet
+    elements.forEach(el => el.classList.remove("displayhidden"));
+    console.log("Most láthatóak a filterek");
+    document.getElementsByClassName("all-filters-button")[0].textContent = "Kevesebb szűrő";
+  } else {
+    // Ha láthatóak, akkor elrejtjük mindet
+    elements.forEach(el => el.classList.add("displayhidden"));
+    console.log("Most rejtve vannak a filterek");
+    document.getElementsByClassName("kategoria-filter")[0].classList.remove("displayhidden")
+    document.getElementsByClassName("szurok-gomb")[0].classList.remove("displayhidden")
+    document.getElementsByClassName("all-filters-button")[0].textContent ="További szűrők";
+  }
+}
+
+</script>
+<script>
+  document.getElementById("search-category").addEventListener("keydown", function(event) {
+     if (event.key === "Enter") {
+      event.preventDefault(); // ne küldjön el semmit véletlenül
+      filterItemsBySearch(); // itt fut le a függvényed
+    }
+  });
+</script>
+<script>
+  function filterItemsBySearch(){
+    console.log("Keresés gomb megnyomva");
+
+    const searchinput = document.getElementById("search-category").value.toLowerCase();
+    console.log("Keresett kifejezés: " + searchinput);
+   // ideiglenes vége
+
+    //alert("filterItems");
+//   const filterValuequality = document.getElementById("item-filter-Category-quality").value;
+//   const filterValuelevel = document.getElementById("item-filter-Category-level").value;
+//   const filterValuenoves = document.getElementById("item-filter-Category-noves").value;
+//   const filterValuecategories = document.getElementById("item-filter-Categories").value;
+//   const filterValuehakonteneres = document.getElementById("item-filter-Category-hakonteneres").value;
+//   const filterValuehakonteneres2 = document.getElementById("item-filter-Category-hakonteneres2").value;
+//   const filterValuehanemkonteneres = document.getElementById("item-filter-Category-hanemkonteneres").value;
+    //alert("filtervaluehakonteneres: " + filterValuehakonteneres);
+
+    const cards = document.getElementById("items").getElementsByClassName("item-card");
+
+
+    Array.from(cards).forEach(card => {
+      const searchcategorynam = card.querySelector(".item-title");
+      const searchcategory = searchcategorynam ? searchcategorynam.textContent.trim() : "";
+      const searchcategoryname = searchcategory.toLowerCase();
+
+
+
+      console.log("Kártya nev:", searchcategoryname, "| Keresési érték:", searchinput);
+      // szures logikaja
+      if (
+        (!searchinput || searchcategoryname.includes(searchinput))
+      )
+        {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  
+  }
 
 </script>
 
