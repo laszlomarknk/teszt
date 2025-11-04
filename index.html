@@ -51,14 +51,13 @@
       <div id="modal-body"></div>
     </div>
   </div>
-  
-  
+  <!--filterItemsBySearch-->
 </div>
 <div class="filter-container">
   <!--<div class="search-button-container"> -->
     <div class="search-button-content">
       <input type="text" id="search-category" class="search-button-field" placeholder="Keresés...">
-      <button class="search-button" onclick="filterItemsBySearch()"></button>
+      <button class="search-button" onclick="filterItems()"></button>
     </div>
   <!--</div> -->
   <div class="form-group kategoria-filter">
@@ -282,8 +281,31 @@
 
       console.log("Kártya kategória:", categoryquality, "| Szűrés érték:", filterValuequality);
       console.log("Kártya kategória level:", categorylevel, "| Szűrés érték:", filterValuelevel);
+
+
+      //innen masolt
+    //console.log("Keresés gomb megnyomva");
+
+    const searchinput = document.getElementById("search-category").value.toLowerCase();
+    //console.log("Keresett kifejezés: " + searchinput);
+
+    const cards = document.getElementById("items").getElementsByClassName("item-card");
+
+
+    const searchcategorynam = card.querySelector(".item-title");
+    const searchcategory = searchcategorynam ? searchcategorynam.textContent.trim() : "";
+    const searchcategoryname = searchcategory.toLowerCase();
+
+
+
+    //console.log("Kártya nev:", searchcategoryname, "| Keresési érték:", searchinput);
+     
+
+//masolt idaig
+
       // szures logikaja
       if (
+        (!searchinput || searchcategoryname.includes(searchinput))&& //masolt
         (!filterValuequality || categoryquality === filterValuequality)&&
         (!filterValuelevel || categorylevel === filterValuelevel) &&
         (!filterValuenoves || categorynoves === filterValuenoves) &&
@@ -411,7 +433,8 @@
   document.getElementById("search-category").addEventListener("keydown", function(event) {
      if (event.key === "Enter") {
       event.preventDefault(); // ne küldjön el semmit véletlenül
-      filterItemsBySearch(); // itt fut le a függvényed
+      filterItems();
+      //filterItemsBySearch(); // itt fut le a függvényed
     }
   });
 </script>
@@ -421,17 +444,6 @@
 
     const searchinput = document.getElementById("search-category").value.toLowerCase();
     console.log("Keresett kifejezés: " + searchinput);
-   // ideiglenes vége
-
-    //alert("filterItems");
-//   const filterValuequality = document.getElementById("item-filter-Category-quality").value;
-//   const filterValuelevel = document.getElementById("item-filter-Category-level").value;
-//   const filterValuenoves = document.getElementById("item-filter-Category-noves").value;
-//   const filterValuecategories = document.getElementById("item-filter-Categories").value;
-//   const filterValuehakonteneres = document.getElementById("item-filter-Category-hakonteneres").value;
-//   const filterValuehakonteneres2 = document.getElementById("item-filter-Category-hakonteneres2").value;
-//   const filterValuehanemkonteneres = document.getElementById("item-filter-Category-hanemkonteneres").value;
-    //alert("filtervaluehakonteneres: " + filterValuehakonteneres);
 
     const cards = document.getElementById("items").getElementsByClassName("item-card");
 
