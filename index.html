@@ -217,7 +217,7 @@
             ${itemData.image ? `<img src="${itemData.image}" loading="lazy" sizes="(max-width: 1186px) 100vw, 1186px" class="item-image" alt="Item kép"/>` : ""}
             <h3 class="item-title">${itemData.title || "Névtelen elem"}</h3>
             <p class="item-text description">${itemData.description || ""}</p>
-            <p><strong>Kategória:</strong> ${itemData.category || "Nincs"}</p>
+            <p><strong>Kategória:</strong> ${itemData.category || ""}</p>
             <p class="item-text rendes-kategoriak"><strong>Kategória(rendes):</strong> ${itemData.selectedCategoryFromDropdown || ""}</p>
             <p class="item-text categoriesquality">${itemData.categoriesquality || ""}</p>
             <p class="item-text categorieslevel">${itemData.categorieslevel || ""}</p>
@@ -253,7 +253,7 @@
     const filterValuequality = document.getElementById("item-filter-Category-quality").value;
     const filterValuelevel = document.getElementById("item-filter-Category-level").value;
     const filterValuenoves = document.getElementById("item-filter-Category-noves").value;
-    const filterValuecategories = document.getElementById("item-filter-Categories").value;
+    //const filterValuecategories = document.getElementById("item-filter-Categories").value;
     const filterValuehakonteneres = document.getElementById("item-filter-Category-hakonteneres").value;
     const filterValuehakonteneres2 = document.getElementById("item-filter-Category-hakonteneres2").value;
     const filterValuehanemkonteneres = document.getElementById("item-filter-Category-hanemkonteneres").value;
@@ -331,7 +331,7 @@
         (!filterValuequality || categoryquality === filterValuequality)&&
         (!filterValuelevel || categorylevel === filterValuelevel) &&
         (!filterValuenoves || categorynoves === filterValuenoves) &&
-        (!filterValuecategories || categories === filterValuecategories) &&
+       // (!filterValuecategories || categories === filterValuecategories) &&
         (!filterValuehakonteneres || categoryhakonteneres === filterValuehakonteneres) &&
         (!filterValuehakonteneres2 || categoryhakonteneres2 === filterValuehakonteneres2) &&
         (!filterValuehanemkonteneres || categoryhanemkonteneres === filterValuehanemkonteneres)
