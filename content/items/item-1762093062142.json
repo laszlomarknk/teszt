@@ -1,5 +1,5 @@
 {
-  "ID": "mhthmi4ygrqy",
+  "ID": "mhti0wn9dyxu",
   "title": "Normand fenyő",
   "latin": "Abies nordmanniana",
   "description": "A normand fenyő (Abies nordmanniana) a legkedveltebb karácsonyfa fajta egész Európában, és az egyik legnemesebb örökzöld díszfa.",
@@ -16,7 +16,8 @@
   ],
   "itemsizes": [
     "90-40",
-    "70-90.90-50"
+    "70-90",
+    "90-50"
   ],
   "categorieshakonteneres": "5L",
   "categorieshakonteneres2": "Fenyő",
@@ -25,5 +26,5 @@
   "itemground": "Tápanyagban gazdag, jó vízáteresztő képesség",
   "itemusage": "Kiváló választás karácsonyfának, mivel leveleit sokáig megtartja beltérben is. Ezen kívül ültethető szoliterként a kertben, parkokban, díszfaként a ház előtti területeken, vagy akár reprezentatív terek zöldítésére. Tartós, esztétikus megjelenése miatt gyakran választják prémium kategóriás örökzöldként.",
   "itemlabels": "normand fenyő, Abies nordmanniana, karácsonyfa, lassan növő fenyő, díszfa, örökzöld, prémium fenyő, konténeres fenyő",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1762800032364-edited-1762800022673.png"
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1762800704349-edited-1762800692818.png"
 }
