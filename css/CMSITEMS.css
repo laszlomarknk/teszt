@@ -258,7 +258,8 @@ body {
 }
 body.no-scroll {
   overflow: hidden;
-  padding-right: var(--scrollbar-width, 17px); /* átlagos scrollbar ~17px */
+  padding-right:16px;
+  /*padding-right: var(--scrollbar-width, 17px); /* átlagos scrollbar ~17px */
 }
 
 
@@ -481,14 +482,17 @@ body.no-scroll {
   min-height: 44px;
 }
 .search-button{
-  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 1rem;
   min-width: 40px;
   margin-top: 25px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-
+  justify-content: center;
+  align-items: center;
   min-height: 44px;
+  height: 44px;
 }
 .search-button-field:focus  {
   outline: none;
