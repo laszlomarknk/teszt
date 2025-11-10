@@ -218,7 +218,7 @@
             <h3 class="item-title">${itemData.title || "Névtelen elem"}</h3>
             <p class="item-text description">${itemData.description || ""}</p>
             <p><strong>Kategória:</strong> ${itemData.category || "Nincs"}</p>
-            <p><strong>Kategória(rendes):</strong> ${itemData.selectedCategoryFromDropdown || "Nincs"}</p>
+            <p class="item-text rendes-kategoriak"><strong>Kategória(rendes):</strong> ${itemData.selectedCategoryFromDropdown || ""}</p>
             <p class="item-text categoriesquality">${itemData.categoriesquality || ""}</p>
             <p class="item-text categorieslevel">${itemData.categorieslevel || ""}</p>
             <p class="item-text categoriesnoves">${itemData.categoriesnoves || ""}</p>
@@ -247,6 +247,9 @@
 <script>  // masolas script
    function filterItems() {
     //alert("filterItems");
+
+    const mainfiltervalue = document.getElementById("item-filter-Categories").value;
+    console.log("Fő szűrő érték:consolelogvege!", mainfiltervalue);
     const filterValuequality = document.getElementById("item-filter-Category-quality").value;
     const filterValuelevel = document.getElementById("item-filter-Category-level").value;
     const filterValuenoves = document.getElementById("item-filter-Category-noves").value;
@@ -260,6 +263,19 @@
 
 
     Array.from(cards).forEach(card => {
+
+      const rendeskategori = card.querySelector(".rendes-kategoriak");
+      let rendeskategoriak = "";
+      if (rendeskategori) {
+        const text = rendeskategori.textContent;
+        const parts = text.split(":");
+        rendeskategoriak = parts.length > 1 ? parts[1].trim() : parts[0].trim();
+      }
+
+      console.log("Kártya rendes kategória: consolelogvege!", rendeskategoriak, "| Szűrés érték:Consolelogvege!", mainfiltervalue);
+      console.log(document.getElementById("item-filter-Categories").value);
+
+
       const categoryqual = card.querySelector(".categoriesquality");
       const categoryquality = categoryqual ? categoryqual.textContent.trim() : "";
 
@@ -284,8 +300,8 @@
       const categoryhanemkonteneres = categoryhanemkont ? categoryhanemkont.textContent.trim() : "";
 
 
-      console.log("Kártya kategória:", categoryquality, "| Szűrés érték:", filterValuequality);
-      console.log("Kártya kategória level:", categorylevel, "| Szűrés érték:", filterValuelevel);
+      //console.log("Kártya kategória:", categoryquality, "| Szűrés érték:", filterValuequality);
+     // console.log("Kártya kategória level:", categorylevel, "| Szűrés érték:", filterValuelevel);
 
 
       //innen masolt
@@ -311,6 +327,7 @@
       // szures logikaja
       if (
         (!searchinput || searchcategoryname.includes(searchinput))&& //masolt
+        (!mainfiltervalue || rendeskategoriak.includes(mainfiltervalue)) &&
         (!filterValuequality || categoryquality === filterValuequality)&&
         (!filterValuelevel || categorylevel === filterValuelevel) &&
         (!filterValuenoves || categorynoves === filterValuenoves) &&
