@@ -57,7 +57,12 @@
   <!--<div class="search-button-container"> -->
     <div class="search-button-content">
       <input type="text" id="search-category" class="search-button-field" placeholder="Keresés...">
-      <button class="search-button" onclick="filterItems()"></button>
+      <button class="search-button" onclick="filterItems()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="8" stroke="#A9A9A9" stroke-width="2"/>
+          <line x1="16.6569" y1="16.6569" x2="21.3137" y2="21.3137" stroke="#A9A9A9" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
     </div>
   <!--</div> -->
   <div class="form-group kategoria-filter">
@@ -212,11 +217,11 @@
             ${itemData.image ? `<img src="${itemData.image}" loading="lazy" sizes="(max-width: 1186px) 100vw, 1186px" class="item-image" alt="Item kép"/>` : ""}
             <h3 class="item-title">${itemData.title || "Névtelen elem"}</h3>
             <p class="item-text description">${itemData.description || ""}</p>
-            <p class="item-text category">${itemData.category || ""}</p>
+            <p><strong>Kategória:</strong> ${itemData.category || "Nincs"}</p>
+            <p><strong>Kategória(rendes):</strong> ${itemData.selectedCategoryFromDropdown || "Nincs"}</p>
             <p class="item-text categoriesquality">${itemData.categoriesquality || ""}</p>
             <p class="item-text categorieslevel">${itemData.categorieslevel || ""}</p>
             <p class="item-text categoriesnoves">${itemData.categoriesnoves || ""}</p>
-            <p class="item-text categories">${itemData.categories || ""}</p>
             ${itemData.categorieshakonteneres 
              ? `<p class="item-text categorieshakonteneres" data-value="${itemData.categorieshakonteneres}">
               Konténer méret: ${itemData.categorieshakonteneres}
@@ -336,6 +341,28 @@
 
     const itemData = JSON.parse(card.dataset.item);
     
+    const priceTable = `
+  <table class="ar-tablazat-popupon">
+    <thead>
+      <tr class="ar-tablazat-cimsor">
+        <th class="ar-tablazat-cim">Méret</th>
+        <th class="ar-tablazat-cim">Ár</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${Array.isArray(itemData.itemsizes) && Array.isArray(itemData.itemprices)
+        ? itemData.itemsizes.map((size, i) => `
+            <tr class="ar-tablazat-sor">
+              <td class="ar-tablazat-meret" >${size + " cm"}</td>
+              <td class="ar-tablazat-ar">${itemData.itemprices[i]+ " Ft" || "—"}</td>
+            </tr>
+          `).join("")
+        : `<tr class="ar-tablazat-haures-sor"><td colspan="2" class="ar-tablazat-haures-adat">Nincs adat</td></tr>`}
+    </tbody>
+  </table>
+`;
+
+
     // Betöltjük a modalba
     const modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = `
@@ -349,11 +376,14 @@
         <p><strong>Röv. leir.:</strong> ${itemData.description || "Nincs"} </p>
         <p><strong>Telj. leir.:</strong> ${itemData.descriptionall || "Nincs"} </p>
         <p><strong>Kategória:</strong> ${itemData.category || "Nincs"}</p>
+        <p><strong>Kategória(rendes):</strong> ${itemData.selectedCategoryFromDropdown || "Nincs"}</p>
+  
         <p><strong>Minőség:</strong> ${itemData.categoriesquality || "Nincs"}</p>
         <p><strong>Levél:</strong> ${itemData.categorieslevel || "Nincs"}</p>
         <p><strong>Növés:</strong> ${itemData.categoriesnoves || "Nincs"}</p>
-        <p><strong>Méret:</strong> ${itemData.categories || "Nincs"}</p>
-        <p><strong>Ár:</strong> ${itemData.itemprice || "Nincs"}</p>
+
+         ${priceTable || ""}
+
         <p><strong>Kont. Méret:</strong> ${itemData.categorieshakonteneres || "Nincs"}</p>
         <p><strong>Típus:</strong> ${itemData.categorieshakonteneres2 || itemData.categorieshanemkonteneres || "Nincs"}</p>
         <p><strong>Fényigény:</strong> ${itemData.itemlight || "Nincs"}</p>
@@ -362,6 +392,14 @@
       </div>
     </div>
     `;
+
+    //<p><strong>Méret:</strong> ${(itemData.itemsizes && itemData.itemsizes[0]) || "Nincs"}</p>
+     //   <p><strong>Árak:</strong> ${itemData.itemprices || "Nincs"}</p>
+    //removed item stats
+
+
+
+
     //<div class="extra-content">
    //   <p><strong>Címkék:</strong> ${itemData.itemlabels || "Nincs"}</p>
   //    <p><strong>Item ID:</strong> ${itemData.ID || "Nincs"}</p>
@@ -433,8 +471,8 @@
   document.getElementById("search-category").addEventListener("keydown", function(event) {
      if (event.key === "Enter") {
       event.preventDefault(); // ne küldjön el semmit véletlenül
-      filterItems();
-      //filterItemsBySearch(); // itt fut le a függvényed
+      filterItems(); 
+      //filterItemsBySearch(); 
     }
   });
 </script>
