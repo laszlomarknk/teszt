@@ -1,5 +1,5 @@
 {
-  "ID": "mhhto7m2hk7v",
+  "ID": "mhtffx14e190",
   "title": "Leylandi ciprus",
   "latin": "Cupressocyparis × leylandii",
   "description": "A Leylandi ciprus (Cupressocyparis × leylandii) az egyik leggyorsabban növő örökzöld faj, amelyet leggyakrabban sövényként ültetnek.",
@@ -8,8 +8,13 @@
   "categoriesquality": "Szabadföldi",
   "categorieslevel": "Tűlevél",
   "categoriesnoves": "Gyors",
-  "categoriesmeret": "100 - 125 cm",
-  "itemprice": "3 200 Ft",
+  "categories": "",
+  "itemprices": [
+    "4000"
+  ],
+  "itemsizes": [
+    "110   -120"
+  ],
   "categorieshakonteneres": "",
   "categorieshakonteneres2": "",
   "categorieshanemkonteneres": "Cserjék",
@@ -17,5 +22,5 @@
   "itemground": "Szinte minden kerti talajban jól fejlődik, ha a víz nem pang a gyökereinél",
   "itemusage": "Ideális örökzöld sövény kialakítására, telekhatárok, utak vagy kertek takarására. Gyors növekedésével rövid idő alatt biztosítja a belátás elleni védelmet. Szélfogónak is alkalmas, de akár szoliterként is nevelhető.",
   "itemlabels": "Leylandi ciprus, Cupressocyparis × leylandii, örökzöld sövény, gyorsan növő ciprus, belátás elleni védelem, földlabdás növény",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1762094673341-DSC00004-export10.JPG"
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1762796365855-edited-1762796338738.png"
 }
