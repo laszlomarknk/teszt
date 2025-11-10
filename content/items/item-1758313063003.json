@@ -1,5 +1,5 @@
 {
-  "ID": "mfwzao1o5d26",
+  "ID": "mhtdx5q1arsh",
   "title": "egyikse",
   "latin": "undefined",
   "description": "egyikse",
@@ -8,13 +8,21 @@
   "categoriesquality": "",
   "categorieslevel": "",
   "categoriesnoves": "",
-  "categoriesmeret": "",
-  "itemprice": "undefined",
+  "categories": "",
+  "itemprices": [
+    "3000",
+    "4000"
+  ],
+  "itemsizes": [
+    "120-130",
+    "140-150"
+  ],
+  "categorieshakonteneres": "",
   "categorieshakonteneres2": "",
   "categorieshanemkonteneres": "",
   "itemlight": "undefined",
   "itemground": "undefined",
   "itemusage": "undefined",
   "itemlabels": "undefined",
-  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1758657547069-edited-1758657532794.png"
+  "image": "https://laszlomarknk.github.io/teszt/static/uploads/1762793811029-edited-1762793795248.png"
 }
